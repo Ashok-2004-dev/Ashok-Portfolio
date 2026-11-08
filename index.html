@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Ashok Acharya, Diploma student in Computer System and Network, Bhutan.">
+  <meta name="theme-color" content="#05060d">
+  <title>Ashok Acharya | Computer System and Network Student</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2305060d'/%3E%3Ctext x='32' y='42' font-size='28' font-family='monospace' font-weight='700' text-anchor='middle' fill='%2322d3ee'%3EAA%3C/text%3E%3C/svg%3E">
+  <!-- No external fonts or libraries: the site uses system fonts, so nothing blocks the first paint. -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <noscript><style>#loader{display:none!important}.hero-text>*,.id-card{animation:none!important}</style></noscript>
+  <div id="loader" role="dialog" aria-modal="true" aria-labelledby="wTitle">
+    <div class="w-orb" aria-hidden="true"><i></i><i></i><i></i><b>AA</b></div>
+    <p class="w-greet" id="wGreet">Welcome</p>
+    <p class="w-title" id="wTitle">to the portfolio of <span>Ashok Acharya</span></p>
+    <p class="w-sub">Diploma in Computer System and Network<br>Jigme Namgyal Engineering College, Bhutan</p>
+    <div class="w-bar" aria-hidden="true"><i></i></div>
+    <div class="w-actions">
+      <button id="wEnter" class="btn primary" type="button">Enter portfolio →</button>
+      <button id="wMusic" class="btn ghost small" type="button">Enter with music ♪</button>
+    </div>
+  </div>
+  <div class="glow-cursor" aria-hidden="true"></div>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="pbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a2a8f"/><stop offset="1" stop-color="#0e6aa8"/></linearGradient>
+      <linearGradient id="ban" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+      <radialGradient id="iris" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#7ef0ff"/><stop offset="1" stop-color="#2f7bff"/></radialGradient>
+      <symbol id="hero" viewBox="0 0 200 250">
+        <path d="M48 96Q44 28 100 24Q156 28 152 96L156 150Q146 160 140 146L60 146Q54 160 44 150Z" fill="#3b2a6b"/>
+        <path d="M52 250Q52 148 100 138Q148 148 148 250Z" fill="#2f7bff"/>
+        <path d="M78 140Q100 160 122 140L116 152Q100 166 84 152Z" fill="#1d5fe0"/>
+        <rect x="91" y="116" width="18" height="24" rx="8" fill="#f6cdb8"/>
+        <ellipse cx="100" cy="82" rx="41" ry="43" fill="#ffe3d3"/>
+        <ellipse cx="83" cy="88" rx="8" ry="11" fill="#1b1440"/><ellipse cx="117" cy="88" rx="8" ry="11" fill="#1b1440"/>
+        <ellipse cx="83" cy="90" rx="5.5" ry="8" fill="url(#iris)"/><ellipse cx="117" cy="90" rx="5.5" ry="8" fill="url(#iris)"/>
+        <circle cx="80.5" cy="85" r="2.8" fill="#fff"/><circle cx="114.5" cy="85" r="2.8" fill="#fff"/><circle cx="86" cy="94" r="1.4" fill="#fff"/><circle cx="120" cy="94" r="1.4" fill="#fff"/>
+        <ellipse cx="68" cy="102" rx="7" ry="4" fill="#ff8fa8" opacity=".45"/><ellipse cx="132" cy="102" rx="7" ry="4" fill="#ff8fa8" opacity=".45"/>
+        <path d="M92 105Q100 113 108 105" fill="none" stroke="#b3475f" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M57 80Q58 36 100 33Q142 36 143 80Q130 54 112 62Q100 46 84 62Q68 56 57 80Z" fill="#4d3a8e"/>
+        <path d="M100 34Q96 14 112 10Q104 22 108 34Z" fill="#4d3a8e"/>
+        <path d="M58 84Q56 30 100 29Q144 30 142 84" fill="none" stroke="#22d3ee" stroke-width="5" stroke-linecap="round"/>
+        <rect x="50" y="76" width="13" height="26" rx="6" fill="#22d3ee"/><rect x="137" y="76" width="13" height="26" rx="6" fill="#22d3ee"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Running strip of mini posters above the website -->
+  <div class="ticker" aria-label="Highlights: certificates and projects">
+    <div class="ticker-track">
+      <div class="ticker-set">
+        <a href="#certificates"><b>CC</b><span>CCNA: Introduction to Networks<small>Cisco Network Academy</small></span></a>
+        <a href="#certificates"><b>CC</b><span>CCNA: Switching, Routing, Wireless<small>Cisco Network Academy</small></span></a>
+        <a href="#projects"><b>DH</b><span>DrukHealth GO<small>Hackathon project</small></span></a>
+        <a href="#certificates"><b>LX</b><span>Becoming a Linux Server Admin<small>Packt via Coursera</small></span></a>
+        <a href="#projects"><b>FB</b><span>FindBack<small>Python Tkinter app</small></span></a>
+        <a href="#certificates"><b>PY</b><span>Python Tkinter GUIs<small>EDUCBA via Coursera</small></span></a>
+        <a href="#projects"><b>EH</b><span>Events Hub<small>HTML · CSS · JavaScript</small></span></a>
+        <a href="#certificates"><b>PH</b><span>Laravel &amp; PHP<small>Board Infinity via Coursera</small></span></a>
+        <a href="#projects"><b>ES</b><span>E-Sports Management System<small>Group project</small></span></a>
+        <a href="#certificates"><b>LI</b><span>Introduction to Linux<small>Edureka via Coursera</small></span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="music" role="group" aria-label="Background music">
+    <button id="mPlay" aria-label="Play music">▶</button>
+    <div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    <small><b>Neon Packets</b><span id="mStatus">Synthwave, generated live</span></small>
+    <button id="mMute" class="m" aria-label="Mute or unmute">🔊</button>
+    <input id="mVol" type="range" min="0" max="0.8" step="0.05" value="0.4" aria-label="Volume">
+  </div>
+
+  <!-- Background lighting: static gradients (cheap to paint), moved slightly by script.js for parallax -->
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="progress" id="progress"></div>
+
+  <!-- ============ NAVIGATION MENU ============ -->
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="logo" href="#home"><span>AA</span>Ashok Acharya</a>
+      <ul class="links" id="links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="actions">
+        <button id="theme" class="icon-btn" aria-label="Toggle light and dark theme">◐</button>
+        <a class="btn primary email-btn" href="mailto:2004.ashokacharya@gmail.com">Email me</a>
+        <button id="burger" class="icon-btn burger" aria-label="Open menu" aria-expanded="false" aria-controls="links">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ DEVELOPER TERMINAL (top of the page) ============ -->
+    <section id="terminal" class="wrap term-wrap" aria-label="Developer terminal">
+      <h2 class="sr-only">Developer terminal</h2>
+      <div class="term">
+        <div class="term-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>ashok@portfolio: ~</div>
+        <div id="out" aria-live="polite" tabindex="0"></div>
+        <form id="termForm" autocomplete="off"><span class="ps1">ashok@portfolio:~$</span><input id="cmd" aria-label="Terminal command" autocapitalize="none" spellcheck="false" placeholder="type help"></form>
+        <div class="chips"><button>help</button><button>home</button><button>about</button><button>skills</button><button>projects</button><button>findback</button><button>certificates</button><button>education</button><button>contact</button><button>music</button><button>theme</button><button>clear</button></div>
+      </div>
+    </section>
+
+    <!-- ============ HOME ============ -->
+    <section id="home" class="wrap hero">
+      <div class="hero-text">
+        <h1>Ashok Acharya</h1>
+        <p class="headline">Connecting systems. Securing networks. Building solutions.</p>
+        <p class="typing">$ learning --focus <b id="typed"></b><span class="caret">▍</span></p>
+        <p class="lead">I study Computer System and Network at Jigme Namgyal Engineering College. I am building practical skills in Network, Linux and web development, and learning the basics of cybersecurity.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn ghost" href="#about">About me</a>
+          <a class="btn ghost" href="#terminal">Try the terminal</a>
+        </div>
+        <dl class="stats">
+          <div class="card"><dt data-count="4">0</dt><dd>Projects</dd></div>
+          <div class="card"><dt data-count="6">0</dt><dd>Certificates</dd></div>
+          <div class="card"><dt data-count="6">0</dt><dd>Skill areas</dd></div>
+        </dl>
+      </div>
+
+      <!-- Developer identity card: tilts with the pointer, flips to show the details on the back -->
+      <figure class="photo id-card" id="idCard">
+        <div class="flip-inner">
+          <div class="face front">
+            <div class="inner">
+              <span class="monogram">AA</span>
+              <img src="image/profile.jpeg" width="963" height="1280" alt="Portrait of Ashok Acharya" fetchpriority="high" decoding="async" onerror="this.remove()">
+              <figcaption><b>Ashok Acharya</b>Student · Learner · Aspiring IT professional</figcaption>
+            </div>
+            <span class="scan" aria-hidden="true"></span><span class="holo" aria-hidden="true"></span>
+          </div>
+          <div class="face back" aria-hidden="true">
+            <b class="chip-id">AA</b>
+            <dl>
+              <div><dt>Course</dt><dd>Diploma in Computer System and Network</dd></div>
+              <div><dt>College</dt><dd>Jigme Namgyal Engineering College</dd></div>
+              <div><dt>Languages</dt><dd>English, Dzongkha, Lotshamkha</dd></div>
+              <div><dt>Interests</dt><dd>Network, Linux, programming, cybersecurity</dd></div>
+              <div><dt>GitHub</dt><dd>Ashok-2004-dev</dd></div>
+              <div><dt>Phone</dt><dd>+975 77458410</dd></div>
+            </dl>
+          </div>
+        </div>
+        <button type="button" class="btn ghost small flip-btn" id="flipBtn" aria-pressed="false">Flip card</button>
+      </figure>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="wrap">
+      <h2>About me</h2>
+      <div class="two-columns">
+        <div class="text">
+          <p>I am a Diploma student in Computer System and Network at Jigme Namgyal Engineering College, Bhutan. I want to understand how computer systems, networks and software work, and use that knowledge to solve real problems.</p>
+          <p>I am developing my knowledge of Network, Linux, web development, programming and databases, and I have started learning the fundamentals of cybersecurity. Through coursework and projects I aim to gain practical experience and sharpen my problem-solving.</p>
+          <p><b>Career goals:</b> network administration, system administration, IT support, software development, web development and cybersecurity. I am open to exploring different areas of IT as my studies progress.</p>
+        </div>
+        <dl class="facts card">
+          <div><dt>Course</dt><dd>Diploma in Computer System and Network</dd></div>
+          <div><dt>College</dt><dd>Jigme Namgyal Engineering College</dd></div>
+          <div><dt>Languages</dt><dd>English, Dzongkha, Lotshamkha</dd></div>
+          <div><dt>Interests</dt><dd>Network, Linux, programming, cybersecurity</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="wrap">
+      <div class="sec-head">
+        <h2>Technical skills</h2>
+        <figure class="poster p1" aria-hidden="true">
+          <svg viewBox="0 0 200 250" width="100%" role="presentation">
+            <rect x="2" y="2" width="196" height="246" rx="18" fill="url(#pbg)"/>
+            <g class="spark"><path d="M30 38l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#fff"/><path d="M170 60l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#7ef0ff"/><circle cx="165" cy="30" r="2.5" fill="#fff"/><circle cx="24" cy="120" r="2" fill="#7ef0ff"/></g>
+            <use href="#hero" x="0" y="0" width="200" height="250"/>
+            <path d="M62 152Q36 160 30 178" stroke="#2f7bff" stroke-width="15" stroke-linecap="round" fill="none"/>
+            <path d="M138 152Q164 160 170 178" stroke="#2f7bff" stroke-width="15" stroke-linecap="round" fill="none"/>
+            <g class="banner">
+              <line x1="22" y1="172" x2="178" y2="172" stroke="#fbbf24" stroke-width="5" stroke-linecap="round"/>
+              <path d="M32 174H168V222L150 214L132 222L114 214L96 222L78 214L60 222L42 214L32 222Z" fill="url(#ban)" stroke="#fff" stroke-opacity=".5"/>
+              <text x="100" y="199" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-weight="800" font-size="21" fill="#fff" letter-spacing="1">SKILLS</text>
+              <text x="100" y="213" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-weight="600" font-size="8.5" fill="#fff" opacity=".9">Network · Linux · Web</text>
+              <circle cx="30" cy="178" r="8" fill="#ffe3d3"/><circle cx="170" cy="178" r="8" fill="#ffe3d3"/>
+            </g>
+          </svg>
+        </figure>
+      </div>
+      <div class="skills-layout">
+        <div class="constellation card" id="constellationBox">
+          <svg id="constellation" viewBox="0 0 520 420" role="img" aria-label="Skills constellation: six skill areas around Ashok. Use the buttons below to read each one."></svg>
+          <p class="hint">Select a star, or use the buttons.</p>
+        </div>
+        <div>
+          <div class="skill-buttons" id="skillButtons"></div>
+          <div class="skill-detail card" id="skillDetail" aria-live="polite"></div>
+        </div>
+      </div>
+      <p class="note">Levels are my own assessment of where I am today: Basic, Developing, Comfortable.</p>
+
+      <h3>Professional strengths</h3>
+      <ul class="tags">
+        <li>Problem-solving</li><li>Teamwork</li><li>Communication</li>
+        <li>Creativity</li><li>Time management</li><li>Willingness to learn</li>
+      </ul>
+    </section>
+
+    <!-- ============ PROJECTS (explorer) ============ -->
+    <section id="projects" class="wrap">
+      <div class="sec-head">
+        <h2>Projects</h2>
+        <figure class="poster p2" aria-hidden="true">
+          <svg viewBox="0 0 200 250" width="100%" role="presentation">
+            <rect x="2" y="2" width="196" height="246" rx="18" fill="url(#pbg)"/>
+            <g class="spark"><path d="M30 38l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#fff"/><path d="M170 60l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#7ef0ff"/><circle cx="165" cy="30" r="2.5" fill="#fff"/><circle cx="24" cy="120" r="2" fill="#7ef0ff"/></g>
+            <use href="#hero" x="0" y="0" width="200" height="250"/>
+            <path d="M62 152Q36 160 30 178" stroke="#2f7bff" stroke-width="15" stroke-linecap="round" fill="none"/>
+            <path d="M138 152Q164 160 170 178" stroke="#2f7bff" stroke-width="15" stroke-linecap="round" fill="none"/>
+            <g class="banner">
+              <line x1="22" y1="172" x2="178" y2="172" stroke="#fbbf24" stroke-width="5" stroke-linecap="round"/>
+              <path d="M32 174H168V222L150 214L132 222L114 214L96 222L78 214L60 222L42 214L32 222Z" fill="url(#ban)" stroke="#fff" stroke-opacity=".5"/>
+              <text x="100" y="199" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-weight="800" font-size="21" fill="#fff" letter-spacing="1">PROJECTS</text>
+              <text x="100" y="213" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-weight="600" font-size="8.5" fill="#fff" opacity=".9">Built with curiosity</text>
+              <circle cx="30" cy="178" r="8" fill="#ffe3d3"/><circle cx="170" cy="178" r="8" fill="#ffe3d3"/>
+            </g>
+          </svg>
+        </figure>
+      </div>
+      <div class="explorer">
+        <div class="tree" role="tablist" aria-label="Project explorer">
+          <button role="tab" class="on" data-proj="proj-findback" aria-selected="true"><span aria-hidden="true">▾</span> FindBack<small>Python · Tkinter</small></button>
+          <button role="tab" data-proj="proj-events" aria-selected="false"><span aria-hidden="true">▸</span> Events Hub<small>HTML · CSS · JavaScript</small></button>
+          <button role="tab" data-proj="proj-esports" aria-selected="false"><span aria-hidden="true">▸</span> E-Sports Management System<small>HTML · CSS · Java · MySQL</small></button>
+          <button role="tab" data-proj="proj-drukhealth" aria-selected="false"><span aria-hidden="true">▸</span> DrukHealth GO<small>Hackathon · Healthcare app</small></button>
+        </div>
+
+        <div class="project-grid">
+          <article class="project card feature on" id="proj-findback">
+            <div>
+              <p class="pill">Featured · Desktop application</p>
+              <h3>FindBack</h3>
+              <p class="tech">Python · Tkinter</p>
+              <p>A desktop system that helps students and staff report, search and manage lost and found items on campus.</p>
+              <div class="tabs" role="tablist" aria-label="FindBack case study">
+                <button class="on" data-p="p1" role="tab">Problem</button><button data-p="p2" role="tab">Solution</button><button data-p="p3" role="tab">Features</button><button data-p="p4" role="tab">Why it helps</button>
+              </div>
+              <div class="panel on" id="p1"><p>On a campus, lost belongings are hard to trace. Without one shared record, finders and owners rarely connect.</p></div>
+              <div class="panel" id="p2"><p>FindBack keeps every report in one application, so items can be recorded, searched and followed until they are returned.</p></div>
+              <div class="panel" id="p3"><ul><li>Record an item's name, category, location, date, description and status</li><li>Search reported items</li><li>Manage and update records</li></ul></div>
+              <div class="panel" id="p4"><p>It makes tracking and returning misplaced belongings easier for both students and staff.</p></div>
+            </div>
+            <div class="win" aria-label="Illustration of the fields FindBack records">
+              <div class="win-bar">FindBack — Report an item</div>
+              <div class="win-body"><div><span>Name</span></div><div><span>Category</span></div><div><span>Location</span></div><div><span>Date</span></div><div><span>Description</span></div><div><span>Status</span></div></div>
+              <p>The fields FindBack records for every item.</p>
+            </div>
+          </article>
+
+          <article class="project card" id="proj-events">
+            <p class="pill">Web development</p>
+            <h3>Events Hub</h3>
+            <p class="tech">HTML · CSS · JavaScript</p>
+            <p>A multi-page website that organizes event information in one place, with separate pages for events, a gallery, registration and contact.</p>
+            <ul>
+              <li>Events, gallery, register and contact pages</li>
+              <li>Consistent styling across every page</li>
+            </ul>
+            <a class="link" href="https://github.com/Ashok-2004-dev/events_hub" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
+          </article>
+
+          <article class="project card" id="proj-esports">
+            <p class="pill">Group mini project · In progress</p>
+            <h3>E-Sports Management System</h3>
+            <p class="tech">HTML · CSS · Java · MySQL</p>
+            <p>An academic project that applies programming and database concepts to e-sports management, covering players, teams, tournaments, match schedules and results.</p>
+            <ul>
+              <li>Player profiles and team information</li>
+              <li>Tournament browsing and match results</li>
+              <li>Administrator tools for records</li>
+            </ul>
+            <p class="note">Team: Ashok Acharya, Kanjur Wangmo, Kezang Sherab.</p>
+          </article>
+
+          <article class="project card" id="proj-drukhealth">
+            <p class="pill">Hackathon project · Healthcare</p>
+            <h3>DrukHealth GO</h3>
+            <p class="tech">GNH-based online hospital token system</p>
+            <p>An app idea that lets patients book a hospital token from their phone before leaving home, so they no longer queue from early morning just to get one. It was built for Bhutan's healthcare needs and the values of Gross National Happiness.</p>
+            <ul>
+              <li>Online token booking by hospital and department, with an estimated waiting time</li>
+              <li>Live queue tracking, doctor schedule view and notification alerts</li>
+              <li>Emergency priority and an elderly priority queue</li>
+              <li>Dzongkha language option and a paperless, eco-friendly process</li>
+            </ul>
+            <p class="note">Tagline: "Healthcare should begin with care, not queues."</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section id="education" class="wrap">
+      <h2>Education</h2>
+      <ol class="timeline">
+        <li>
+          <time>2025 – 2027</time>
+          <h3>Diploma in Computer System and Network</h3>
+          <p>Jigme Namgyal Engineering College, Bhutan</p>
+          <span>Currently studying</span>
+        </li>
+        <li>
+          <time>2022</time>
+          <h3>Class XII</h3>
+          <p>Yonten Kuenjung Academy (YKA), Phuentsholing, Bhutan</p>
+          <span>Scored 75%</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ CERTIFICATES ============ -->
+    <section id="certificates" class="wrap">
+      <h2>Certificates and achievements</h2>
+      <div class="filters"><button class="on" data-f="all">All six</button><button data-f="net">Network</button><button data-f="linux">Linux</button><button data-f="code">Web and programming</button></div>
+      <ul class="cert-grid vault">
+        <li data-cat="net"><button class="v" type="button" data-title="CCNA: Introduction to Networks" data-by="Cisco Network Academy · Jigme Namgyel Engineering College (RUB)" data-date="27 Jul 2026" data-cat="net" data-full="certificates/ccna-intro-to-networks-full.webp" data-pdf="certificates/ccna-intro-to-networks.pdf" data-verify="" data-id="Cert ID 01af83f6-75f8-4ba2-b3e3-5d62eebd32e8"><img src="certificates/ccna-intro-to-networks.webp" width="560" height="380" alt="CCNA: Introduction to Networks certificate preview" loading="lazy" decoding="async"><span class="cap"><b>CCNA: Introduction to Networks</b><small>Cisco Network Academy · 27 Jul 2026</small></span></button></li>
+        <li data-cat="net"><button class="v" type="button" data-title="CCNA: Switching, Routing, and Wireless Essentials" data-by="Cisco Network Academy · Jigme Namgyel Engineering College (RUB)" data-date="27 Jul 2026" data-cat="net" data-full="certificates/ccna-switching-routing-wireless-full.webp" data-pdf="certificates/ccna-switching-routing-wireless.pdf" data-verify="" data-id="Cert ID 525f23f4-a5cc-442c-a46e-8c7b91a7ef06"><img src="certificates/ccna-switching-routing-wireless.webp" width="560" height="380" alt="CCNA: Switching, Routing, and Wireless Essentials certificate preview" loading="lazy" decoding="async"><span class="cap"><b>CCNA: Switching, Routing, and Wireless Essentials</b><small>Cisco Network Academy · 27 Jul 2026</small></span></button></li>
+        <li data-cat="linux"><button class="v" type="button" data-title="Becoming a Linux Server Admin" data-by="Packt via Coursera" data-date="21 Sep 2026" data-cat="linux" data-full="certificates/linux-server-admin-full.webp" data-pdf="certificates/linux-server-admin.pdf" data-verify="https://coursera.org/verify/2LFL5FVTCZP9" data-id=""><img src="certificates/linux-server-admin.webp" width="560" height="433" alt="Becoming a Linux Server Admin certificate preview" loading="lazy" decoding="async"><span class="cap"><b>Becoming a Linux Server Admin</b><small>Packt via Coursera · 21 Sep 2026</small></span></button></li>
+        <li data-cat="linux"><button class="v" type="button" data-title="Introduction to Linux" data-by="Edureka via Coursera" data-date="18 Sep 2026" data-cat="linux" data-full="certificates/intro-to-linux-full.webp" data-pdf="certificates/intro-to-linux.pdf" data-verify="https://coursera.org/verify/SCSTA954UESX" data-id=""><img src="certificates/intro-to-linux.webp" width="560" height="433" alt="Introduction to Linux certificate preview" loading="lazy" decoding="async"><span class="cap"><b>Introduction to Linux</b><small>Edureka via Coursera · 18 Sep 2026</small></span></button></li>
+        <li data-cat="code"><button class="v" type="button" data-title="Python Tkinter: Design, Build &amp; Integrate GUIs" data-by="EDUCBA via Coursera" data-date="15 Sep 2026" data-cat="code" data-full="certificates/python-tkinter-full.webp" data-pdf="certificates/python-tkinter.pdf" data-verify="https://coursera.org/verify/G0YHXPUFMMMN" data-id=""><img src="certificates/python-tkinter.webp" width="560" height="433" alt="Python Tkinter: Design, Build &amp; Integrate GUIs certificate preview" loading="lazy" decoding="async"><span class="cap"><b>Python Tkinter: Design, Build &amp; Integrate GUIs</b><small>EDUCBA via Coursera · 15 Sep 2026</small></span></button></li>
+        <li data-cat="code"><button class="v" type="button" data-title="Master Full-Stack Web Development with Laravel &amp; PHP" data-by="Board Infinity via Coursera" data-date="15 Sep 2026" data-cat="code" data-full="certificates/laravel-php-full.webp" data-pdf="certificates/laravel-php.pdf" data-verify="https://coursera.org/verify/PNV5AUWW4R9H" data-id=""><img src="certificates/laravel-php.webp" width="560" height="433" alt="Master Full-Stack Web Development with Laravel &amp; PHP certificate preview" loading="lazy" decoding="async"><span class="cap"><b>Master Full-Stack Web Development with Laravel &amp; PHP</b><small>Board Infinity via Coursera · 15 Sep 2026</small></span></button></li>
+      </ul>
+      <dialog id="lb" aria-label="Certificate viewer"><img id="lbImg" alt="">
+        <div class="bar"><p id="lbInfo"></p><span><button id="lbPrev" class="btn ghost small" type="button" aria-label="Previous certificate">‹</button><button id="lbNext" class="btn ghost small" type="button" aria-label="Next certificate">›</button> <a id="lbVerify" class="btn ghost small" target="_blank" rel="noopener noreferrer">Verify online</a> <a id="lbDl" class="btn primary small" download>Download PDF</a> <button id="lbClose" class="btn ghost small" type="button">Close</button></span></div></dialog>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="wrap">
+      <div class="sec-head">
+        <h2>Contact</h2>
+        <figure class="poster p3" aria-hidden="true">
+          <svg viewBox="0 0 200 250" width="100%" role="presentation">
+            <rect x="2" y="2" width="196" height="246" rx="18" fill="url(#pbg)"/>
+            <g class="spark"><path d="M30 38l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#fff"/><path d="M170 60l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#7ef0ff"/><circle cx="165" cy="30" r="2.5" fill="#fff"/><circle cx="24" cy="120" r="2" fill="#7ef0ff"/></g>
+            <use href="#hero" x="0" y="0" width="200" height="250"/>
+            <path d="M62 152Q36 160 30 178" stroke="#2f7bff" stroke-width="15" stroke-linecap="round" fill="none"/>
+            <path d="M138 152Q164 160 170 178" stroke="#2f7bff" stroke-width="15" stroke-linecap="round" fill="none"/>
+            <g class="banner">
+              <line x1="22" y1="172" x2="178" y2="172" stroke="#fbbf24" stroke-width="5" stroke-linecap="round"/>
+              <path d="M32 174H168V222L150 214L132 222L114 214L96 222L78 214L60 222L42 214L32 222Z" fill="url(#ban)" stroke="#fff" stroke-opacity=".5"/>
+              <text x="100" y="199" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-weight="800" font-size="21" fill="#fff" letter-spacing="1">SAY HI!</text>
+              <text x="100" y="213" text-anchor="middle" font-family="system-ui,Segoe UI,Arial,sans-serif" font-weight="600" font-size="8.5" fill="#fff" opacity=".9">Let's connect</text>
+              <circle cx="30" cy="178" r="8" fill="#ffe3d3"/><circle cx="170" cy="178" r="8" fill="#ffe3d3"/>
+            </g>
+          </svg>
+        </figure>
+      </div>
+      <div class="two-columns">
+        <div class="text">
+          <p>I welcome opportunities to learn, collaborate and discuss technology projects.</p>
+          <p>
+            <a class="link" href="mailto:2004.ashokacharya@gmail.com">2004.ashokacharya@gmail.com</a>
+            <button id="copy" class="btn ghost small" type="button">Copy email</button>
+          </p>
+          <p><a class="link" href="https://github.com/Ashok-2004-dev" target="_blank" rel="noopener noreferrer">GitHub: Ashok-2004-dev ↗</a></p>
+          <p><a class="link" href="https://www.facebook.com/share/19wjAB2tC5/" target="_blank" rel="noopener noreferrer">Facebook: Ashok Acharya ↗</a></p>
+          <p class="soon"><span class="link off" aria-disabled="true">LinkedIn</span> <small>coming soon</small></p>
+          <p><a class="link" href="tel:+97577458410">+975 77458410</a></p>
+        </div>
+        <form id="form" class="card">
+          <label>Your name <input name="name" autocomplete="name"></label>
+          <label>Your email <input name="email" type="email" autocomplete="email"></label>
+          <label>Message <textarea name="message" rows="4"></textarea></label>
+          <button class="btn primary" type="submit">Send message</button>
+          <p id="formMessage" class="note" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <button id="backTop" class="icon-btn" type="button" aria-label="Back to top">↑</button>
+  <footer class="footer">© <span id="year"></span> Ashok Acharya · Personal Portfolio</footer>
+</body>
+</html>
